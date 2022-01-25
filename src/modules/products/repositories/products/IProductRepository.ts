@@ -11,9 +11,9 @@ interface IUpdateProductDTO extends ICreateProductDTO {
 }
 
 interface IProductRepository {
-  findById(id: number): Promise<Product>;
+  findById(id: number): Promise<Product | undefined>;
 
-  findByName(name: string): Promise<Product>;
+  findByName(name: string): Promise<Product | undefined>;
 
   findByCategory(category_id: number): Promise<Product[]>;
 
@@ -26,4 +26,4 @@ interface IProductRepository {
   delete(id: number): Promise<void>;
 }
 
-export { IProductRepository };
+export { IProductRepository, ICreateProductDTO, IUpdateProductDTO };
