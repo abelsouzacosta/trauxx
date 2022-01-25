@@ -1,4 +1,5 @@
-import { Column, Entity, PrimaryGeneratedColumn } from "typeorm";
+import { Product } from "src/modules/products/entities/Product";
+import { Column, Entity, OneToMany, PrimaryGeneratedColumn } from "typeorm";
 
 @Entity("categories")
 class Category {
@@ -10,6 +11,11 @@ class Category {
 
   @Column()
   image: string;
+
+  @OneToMany(() => Product, (product) => product.category, {
+    cascade: true,
+  })
+  categories: Category[];
 }
 
 export { Category };
