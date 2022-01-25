@@ -16,6 +16,8 @@ interface ICategoryRepository {
 
   list(): Promise<Category[]>;
 
+  listProductsOfACategory(id: number): Promise<Category | undefined>;
+
   create({ name, image }: ICreateCategoryDTO): Promise<void>;
 
   update({ id, name, image }: IUpdateCategoryDTO): Promise<void>;

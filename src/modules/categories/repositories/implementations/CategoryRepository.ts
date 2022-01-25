@@ -40,6 +40,17 @@ class CategoryRepository implements ICategoryRepository {
     return categories;
   }
 
+  async listProductsOfACategory(id: number): Promise<Category | undefined> {
+    const category = await this.repository.findOne({
+      where: {
+        id,
+      },
+      relations: ["products"],
+    });
+
+    return category;
+  }
+
   async create({ name, image }: ICreateCategoryDTO): Promise<void> {
     const category = this.repository.create({
       name,

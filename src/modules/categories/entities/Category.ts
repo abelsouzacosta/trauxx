@@ -15,7 +15,7 @@ class Category {
   @OneToMany(() => Product, (product) => product.category, {
     cascade: true,
   })
-  categories: Category[];
+  products: Product[];
 }
 
 export { Category };
