@@ -3,11 +3,13 @@ import { CreateProductController } from "src/modules/products/usecases/createPro
 import { DeleteProductController } from "src/modules/products/usecases/deleteProduct/DeleteProductController";
 import { GetDetailsOfAProductController } from "src/modules/products/usecases/getDetailsOfAProduct/GetDetailsOfAProductController";
 import { ListProductsController } from "src/modules/products/usecases/listProducts/ListProductsController";
+import { UpdateProductController } from "src/modules/products/usecases/updateProduct/UpdateProductController";
 
 const productRouter = Router();
 const create = new CreateProductController();
 const list = new ListProductsController();
 const details = new GetDetailsOfAProductController();
+const update = new UpdateProductController();
 const delete_product = new DeleteProductController();
 
 productRouter.get("/", list.handle);
@@ -15,6 +17,8 @@ productRouter.get("/", list.handle);
 productRouter.get("/:id", details.handle);
 
 productRouter.post("/", create.handle);
+
+productRouter.put("/:id", update.handle);
 
 productRouter.delete("/:id", delete_product.handle);
 
