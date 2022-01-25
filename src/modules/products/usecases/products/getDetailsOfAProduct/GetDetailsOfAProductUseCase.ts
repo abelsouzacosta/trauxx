@@ -1,8 +1,8 @@
 import { ApplicationError } from "src/shared/errors/ApplicationError";
 import { inject, injectable } from "tsyringe";
 
-import { Product } from "../../entities/Product";
-import { IProductRepository } from "../../repositories/products/IProductRepository";
+import { Product } from "../../../entities/Product";
+import { IProductRepository } from "../../../repositories/products/IProductRepository";
 
 @injectable()
 class GetDetailsOfAProductUseCase {

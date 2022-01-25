@@ -1,9 +1,9 @@
 import { Router } from "express";
-import { CreateProductController } from "src/modules/products/usecases/createProduct/CreateProductController";
-import { DeleteProductController } from "src/modules/products/usecases/deleteProduct/DeleteProductController";
-import { GetDetailsOfAProductController } from "src/modules/products/usecases/getDetailsOfAProduct/GetDetailsOfAProductController";
-import { ListProductsController } from "src/modules/products/usecases/listProducts/ListProductsController";
-import { UpdateProductController } from "src/modules/products/usecases/updateProduct/UpdateProductController";
+import { CreateProductController } from "src/modules/products/usecases/products/createProduct/CreateProductController";
+import { DeleteProductController } from "src/modules/products/usecases/products/deleteProduct/DeleteProductController";
+import { GetDetailsOfAProductController } from "src/modules/products/usecases/products/getDetailsOfAProduct/GetDetailsOfAProductController";
+import { ListProductsController } from "src/modules/products/usecases/products/listProducts/ListProductsController";
+import { UpdateProductController } from "src/modules/products/usecases/products/updateProduct/UpdateProductController";
 
 const productRouter = Router();
 const create = new CreateProductController();

@@ -1,7 +1,7 @@
 import { ApplicationError } from "src/shared/errors/ApplicationError";
 import { inject, injectable } from "tsyringe";
 
-import { IProductRepository } from "../../repositories/products/IProductRepository";
+import { IProductRepository } from "../../../repositories/products/IProductRepository";
 
 @injectable()
 class DeleteProductUseCase {

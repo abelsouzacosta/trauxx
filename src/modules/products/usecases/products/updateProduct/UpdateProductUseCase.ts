@@ -5,7 +5,7 @@ import { inject, injectable } from "tsyringe";
 import {
   IProductRepository,
   IUpdateProductDTO,
-} from "../../repositories/products/IProductRepository";
+} from "../../../repositories/products/IProductRepository";
 
 @injectable()
 class UpdateProductUseCase {

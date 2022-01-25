@@ -4,7 +4,7 @@ import { inject, injectable } from "tsyringe";
 import {
   IProductRepository,
   ICreateProductDTO,
-} from "../../repositories/products/IProductRepository";
+} from "../../../repositories/products/IProductRepository";
 
 @injectable()
 class CreateProductUseCase {
