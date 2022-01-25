@@ -17,6 +17,8 @@ interface IProductRepository {
 
   findByCategory(category_id: number): Promise<Product[]>;
 
+  getProductDetails(id: number): Promise<Product | undefined>;
+
   list(): Promise<Product[]>;
 
   create({ name, image, category_id }: ICreateProductDTO): Promise<void>;

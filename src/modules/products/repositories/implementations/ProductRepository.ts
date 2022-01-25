@@ -54,6 +54,18 @@ class ProductRepository implements IProductRepository {
     await this.repository.save(product);
   }
 
+  async getProductDetails(id: number): Promise<Product | undefined> {
+    const product = await this.repository.findOne({
+      where: {
+        id,
+      },
+      select: ["id", "name", "image"],
+      relations: ["category"],
+    });
+
+    return product;
+  }
+
   async list(): Promise<Product[]> {
     const products = await this.repository.find();
 
