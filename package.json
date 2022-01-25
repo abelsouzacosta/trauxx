@@ -7,7 +7,7 @@
     "cors": "^2.8.5",
     "express": "^4.17.2",
     "express-async-errors": "^3.1.1",
-    "mysql": "^2.18.1",
+    "mysql": "npm:mysql2@^2.1.0",
     "reflect-metadata": "^0.1.13",
     "typeorm": "^0.2.41"
   },
@@ -40,6 +40,7 @@
     }
   },
   "scripts": {
-    "dev": "tsnd --inspect --transpile-only --ignore-watch node_modules --respawn -r tsconfig-paths/register src/server.ts"
+    "dev": "tsnd --inspect --transpile-only --ignore-watch node_modules --respawn -r tsconfig-paths/register src/server.ts",
+    "typeorm": "tsnd ./node_modules/typeorm/cli"
   }
 }
