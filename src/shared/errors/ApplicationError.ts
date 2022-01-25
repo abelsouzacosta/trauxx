@@ -1,9 +1,9 @@
 class ApplicationError {
-  private readonly message: string;
-  private readonly statusCode: number;
+  public readonly message: string;
+  public readonly statusCode: number;
 
   constructor(message: string, status: number) {
-    Object.assign(this, { message, status });
+    Object.assign(this, { message, statusCode: status });
   }
 }
 
