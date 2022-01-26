@@ -4,6 +4,7 @@ import { DeleteCategoryController } from "src/modules/categories/usecases/catego
 import { ListCategoriesController } from "src/modules/categories/usecases/categories/listCategories/ListCategoriesController";
 import { ListProductsOfACategoryController } from "src/modules/categories/usecases/categories/listProductsOfACategory/ListProductsOfACategoryController";
 import { UpdateCategoryController } from "src/modules/categories/usecases/categories/updateCategory/UpdateCategoryController";
+import isAuthenticated from "src/shared/middlewares/AuthenticationMiddleware";
 
 const categoryRouter = Router();
 
@@ -12,6 +13,8 @@ const list = new ListCategoriesController();
 const listProducts = new ListProductsOfACategoryController();
 const update = new UpdateCategoryController();
 const delete_category = new DeleteCategoryController();
+
+categoryRouter.use(isAuthenticated);
 
 categoryRouter.get("/", list.handle);
 
