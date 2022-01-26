@@ -1,4 +1,3 @@
-import { Category } from "src/modules/categories/entities/Category";
 import {
   Column,
   Entity,
@@ -6,6 +5,8 @@ import {
   ManyToOne,
   PrimaryGeneratedColumn,
 } from "typeorm";
+
+import { Category } from "../../categories/entities/Category";
 
 @Entity("products")
 class Product {
