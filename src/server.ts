@@ -1,6 +1,7 @@
 import "reflect-metadata";
 import express from "express";
 import "express-async-errors";
+import "dotenv/config";
 
 import { router } from "./routes";
 import errorHandler from "./shared/middlewares/MiddlewareError";
@@ -20,6 +21,6 @@ app.use(express.json());
 app.use(router);
 app.use(errorHandler);
 
-const PORT = 3333;
+const { PORT } = process.env;
 
 app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
