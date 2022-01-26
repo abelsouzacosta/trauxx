@@ -1,11 +1,11 @@
+import { UserRepository } from "src/modules/authentication/repositories/implementations/UserRepository";
+import { IUserRepository } from "src/modules/authentication/repositories/users/IUserRepository";
+import { PasswordHandler } from "src/modules/authentication/utils/cryptography/implementations/PasswordHandler";
+import { IPasswordHandler } from "src/modules/authentication/utils/cryptography/password/IPasswordHandler";
 import { ICategoryRepository } from "src/modules/categories/repositories/categories/ICategoryRepository";
 import { CategoryRepository } from "src/modules/categories/repositories/implementations/CategoryRepository";
 import { ProductRepository } from "src/modules/products/repositories/implementations/ProductRepository";
 import { IProductRepository } from "src/modules/products/repositories/products/IProductRepository";
-import { UserRepository } from "src/modules/users/repositories/implementations/UserRepository";
-import { IUserRepository } from "src/modules/users/repositories/users/IUserRepository";
-import { PasswordHandler } from "src/modules/users/utils/cryptography/implementations/PasswordHandler";
-import { IPasswordHandler } from "src/modules/users/utils/cryptography/password/IPasswordHandler";
 import { container } from "tsyringe";
 
 container.registerSingleton<ICategoryRepository>(

@@ -1,8 +1,8 @@
 import {
   ICreateUserDTO,
   IUserRepository,
-} from "src/modules/users/repositories/users/IUserRepository";
-import { IPasswordHandler } from "src/modules/users/utils/cryptography/password/IPasswordHandler";
+} from "src/modules/authentication/repositories/users/IUserRepository";
+import { IPasswordHandler } from "src/modules/authentication/utils/cryptography/password/IPasswordHandler";
 import { ApplicationError } from "src/shared/errors/ApplicationError";
 import { inject, injectable } from "tsyringe";
 
